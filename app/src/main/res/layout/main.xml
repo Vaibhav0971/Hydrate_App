@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/body"
+    android:onClick="body"
+    tools:context=".main">
+
+    <!--
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_rounded"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:layout_marginTop="40dp"
+        android:text="Reset"
+        android:onClick="reset"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        />
+-->
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h002"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02000" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h003"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03000" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h012"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12315" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h021"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2130" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h032"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28000" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h060"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60000" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h088"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90000" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v005"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v083"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.834666" />
+
+    <ImageView
+        android:id="@+id/img_bg_box"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        app:layout_constraintStart_toStartOf="@+id/v083"
+        app:layout_constraintTop_toTopOf="@+id/h002"
+        app:srcCompat="@drawable/img_bg_square" />
+
+    <ImageView
+        android:id="@+id/gender_profile"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:onClick="gender_profile"
+        app:layout_constraintBottom_toBottomOf="@+id/img_bg_box"
+        app:layout_constraintEnd_toEndOf="@+id/img_bg_box"
+        app:layout_constraintStart_toStartOf="@+id/v083"
+        app:srcCompat="@drawable/boy" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:onClick="menu"
+        app:layout_constraintStart_toStartOf="@+id/v005"
+        app:layout_constraintTop_toTopOf="@+id/h003"
+        app:srcCompat="@drawable/click_square" />
+
+    <ImageView
+        android:id="@+id/menu_dot_1"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        app:layout_constraintStart_toStartOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="@+id/menu"
+        app:srcCompat="@drawable/menu_dots" />
+
+    <ImageView
+        android:id="@+id/menu_dot_2"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        app:layout_constraintEnd_toEndOf="@+id/menu"
+        app:layout_constraintTop_toTopOf="@+id/menu"
+        app:srcCompat="@drawable/menu_dots" />
+
+    <ImageView
+        android:id="@+id/menu_dot_3"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/menu"
+        app:layout_constraintStart_toStartOf="@+id/menu"
+        app:srcCompat="@drawable/menu_dots" />
+
+    <ImageView
+        android:id="@+id/menu_dot_4"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/menu"
+        app:layout_constraintEnd_toEndOf="@+id/menu"
+        app:srcCompat="@drawable/menu_dots" />
+
+    <TextView
+        android:id="@+id/goodMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/berlin_sans_fb"
+        android:text="Good Morning"
+        android:textColor="#000000"
+        android:textSize="55sp"
+        app:layout_constraintStart_toStartOf="@+id/v005"
+        app:layout_constraintTop_toTopOf="@+id/h012" />
+
+    <TextView
+        android:id="@+id/nextRemainder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/berlin_sans_fb"
+        android:text="Next reminder in: 45min"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/v005"
+        app:layout_constraintTop_toTopOf="@+id/h021" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="212dp"
+        android:layout_height="212dp"
+        android:progress="75"
+        android:progressDrawable="@drawable/circular_progress"
+        android:rotation="-90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h032" />
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/waveLoadingView"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/h032"
+        app:wlv_borderColor="@color/colorAccent"
+        app:wlv_round_rectangle="true"
+        app:wlv_shapeType="circle"
+        app:wlv_triangle_direction="north"
+        app:wlv_waveAmplitude="60"
+        app:wlv_waveColor="#1E7EFF" />
+
+    <TextView
+        android:id="@+id/percent_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/berlin_sans_fb"
+        android:paddingBottom="8dp"
+        android:text="%"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/percentage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/percentage" />
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/berlin_sans_fb"
+        android:text="75"
+        android:textColor="#000000"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="@+id/waveLoadingView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/percent_sign"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/waveLoadingView" />
+
+    <TextView
+        android:id="@+id/your_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/maian"
+        android:text="Your Goal"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/waveLoadingView"
+        app:layout_constraintEnd_toEndOf="@+id/waveLoadingView"
+        app:layout_constraintStart_toStartOf="@+id/waveLoadingView"
+        app:layout_constraintTop_toBottomOf="@+id/percentage" />
+
+    <TextView
+        android:id="@+id/your_goal_ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/maian"
+        android:text="3000ml"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/your_goal"
+        app:layout_constraintStart_toStartOf="@+id/your_goal"
+        app:layout_constraintTop_toBottomOf="@+id/your_goal" />
+
+    <TextView
+        android:id="@+id/hydrated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/berlin_sans_fb"
+        android:text="You are well hydrated"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h060" />
+
+    <ImageView
+        android:id="@+id/blue_background"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blue_background" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/h088"
+        app:layout_constraintEnd_toEndOf="@+id/blue_background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/blue_background">
+
+        <LinearLayout
+            android:id="@+id/add_water_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/w100ml"
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    android:onClick="w100ml"
+                    app:srcCompat="@drawable/water_selecter_bg" />
+
+                <ImageView
+                    android:id="@+id/cup"
+                    android:onClick="cup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/w100ml"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/w100ml"
+                    app:layout_constraintTop_toTopOf="@+id/w100ml"
+                    app:srcCompat="@drawable/cup" />
+
+                <TextView
+                    android:id="@+id/t100"
+                    android:onClick="t100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="5dp"
+                    android:text="100"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t100ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/w100ml" />
+
+                <TextView
+                    android:id="@+id/t100ml"
+                    android:onClick="t100ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="10dp"
+                    android:text="ml"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/t100"
+                    app:layout_constraintEnd_toStartOf="@+id/w100ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/t100" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/w150ml"
+                    android:onClick="w150ml"
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    app:srcCompat="@drawable/water_selecter_bg" />
+
+                <ImageView
+                    android:id="@+id/mug"
+                    android:onClick="mug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/w150ml"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/w150ml"
+                    app:layout_constraintTop_toTopOf="@+id/w150ml"
+                    app:srcCompat="@drawable/mug" />
+
+                <TextView
+                    android:id="@+id/t150"
+                    android:onClick="t150"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="5dp"
+                    android:text="150"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t150ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/w150ml" />
+
+                <TextView
+                    android:id="@+id/t150ml"
+                    android:onClick="t150ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="10dp"
+                    android:text="ml"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/t150"
+                    app:layout_constraintEnd_toStartOf="@+id/w150ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/t150" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/w200ml"
+                    android:onClick="w200ml"
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    app:srcCompat="@drawable/water_selecter_bg" />
+
+                <ImageView
+                    android:id="@+id/glass"
+                    android:onClick="glass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/w200ml"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/w200ml"
+                    app:layout_constraintTop_toTopOf="@+id/w200ml"
+                    app:srcCompat="@drawable/glass" />
+
+                <TextView
+                    android:id="@+id/t200"
+                    android:onClick="t200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="5dp"
+                    android:text="200"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t200ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/w200ml" />
+
+                <TextView
+                    android:id="@+id/t200ml"
+                    android:onClick="t200ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="10dp"
+                    android:text="ml"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/t200"
+                    app:layout_constraintEnd_toStartOf="@+id/w200ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/t200" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/w300ml"
+                    android:onClick="w300ml"
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    app:srcCompat="@drawable/water_selecter_bg" />
+
+                <ImageView
+                    android:id="@+id/big_mug"
+                    android:onClick="big_mug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/w300ml"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/w300ml"
+                    app:layout_constraintTop_toTopOf="@+id/w300ml"
+                    app:srcCompat="@drawable/big_mug" />
+
+                <TextView
+                    android:id="@+id/t300"
+                    android:onClick="t300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="5dp"
+                    android:text="300"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t300ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/w300ml" />
+
+                <TextView
+                    android:id="@+id/t300ml"
+                    android:onClick="t300ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="10dp"
+                    android:text="ml"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/t300"
+                    app:layout_constraintEnd_toStartOf="@+id/w300ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/t300" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/w400ml"
+                    android:onClick="w400ml"
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    app:srcCompat="@drawable/water_selecter_bg" />
+
+                <ImageView
+                    android:id="@+id/bottle"
+                    android:onClick="bottle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/w400ml"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/w400ml"
+                    app:layout_constraintTop_toTopOf="@+id/w400ml"
+                    app:srcCompat="@drawable/bottle" />
+
+                <TextView
+                    android:id="@+id/t400"
+                    android:onClick="t400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="5dp"
+                    android:text="400"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/t400ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/w400ml" />
+
+                <TextView
+                    android:id="@+id/t400ml"
+                    android:onClick="t400ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:paddingBottom="10dp"
+                    android:text="ml"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/t400"
+                    app:layout_constraintEnd_toStartOf="@+id/w400ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/t400" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/wc1"
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    android:onClick="wc1"
+                    app:srcCompat="@drawable/water_selecter_bg" />
+
+                <ImageView
+                    android:id="@+id/custom_ml_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="custom_ml"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/wc1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/wc1"
+                    app:layout_constraintTop_toTopOf="@+id/wc1"
+                    app:srcCompat="@drawable/add" />
+
+                <TextView
+                    android:id="@+id/tc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:onClick="tc1"
+                    android:paddingBottom="5dp"
+                    android:text="Custom"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tc1ml"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wc1"/>
+
+                <TextView
+                    android:id="@+id/tc1ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_r"
+                    android:onClick="tc1ml"
+                    android:paddingBottom="10dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tc1"
+                    app:layout_constraintEnd_toStartOf="@+id/wc1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tc1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <Button
+        android:id="@+id/update_status"
+        android:layout_width="220dp"
+        android:layout_height="42dp"
+        android:background="@drawable/update_status_btn"
+        android:fontFamily="@font/open_sans_sb"
+        android:text="Update Status"
+        android:onClick="updateStatus"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h088"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <Button
+        android:id="@+id/recent"
+        android:onClick="recent"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/side_btn"
+        android:fontFamily="@font/open_sans_r"
+        android:text="100ml"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/update_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_status" />
+
+    <Button
+        android:id="@+id/custom"
+        android:onClick="custom"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/side_btn"
+        android:fontFamily="@font/open_sans_r"
+        android:text="Custom"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/update_status"
+        app:layout_constraintEnd_toStartOf="@+id/update_status"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
